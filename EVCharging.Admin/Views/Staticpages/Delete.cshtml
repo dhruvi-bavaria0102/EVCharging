@@ -1,0 +1,41 @@
+﻿@model EVCharging.Data.Staticpage
+
+@{
+    ViewBag.Title = "Delete the selected Static page";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Static Page Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaticPageName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Static Page Content")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StaticPageContent)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-success" /> |
+    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-danger" })
+</div>
+    }
+</div>

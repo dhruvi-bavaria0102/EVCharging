@@ -1,0 +1,97 @@
+﻿@model EVCharging.Data.Connector
+
+@{
+    ViewBag.Title = "Details of selected connector";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Connector Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Connector_Types.ConnectorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Location Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.LocationName)
+        </dd>
+        <dt>
+            @Html.DisplayName("Charger Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charger.ChargerName)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayName("Connector Status")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConnectorStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("SMS Code")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SMSCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Connector UuId")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConnectorUnId)
+        </dd>
+        <dt>
+            @Html.DisplayName("Connector Standard")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Connector_Types.ConnectorStandard)
+        </dd>
+        <dt>
+            @Html.DisplayName("Connector Power Type")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Connector_Types.PowerType)
+        </dd>
+        <dt>
+            @Html.DisplayName("Connector Category")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Connector_Types.ConnectorCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Connector Formate")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Connector_Types.ConnectorFormate)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", null, new {id = Model.Id ,@class = "btn btn-danger"}) |
+    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-danger" })
+</p>
